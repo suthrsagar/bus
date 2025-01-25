@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus and Car Service</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #4CAF50;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+  background-color: #45a049;
+  border-radius: 5px;
+}
+
+/* Services Section */
+.services-section {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-name {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.book-now {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.book-now:hover {
+  background: #45a049;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+</style>
+</head>
+<body>
+  <section id="services" class="services-section">
+    <div class="service-card">
+      <h2 class="service-name">M R Bus Service</h2>
+      <p>Happy Journey!</p>
+      <div class="details">
+        <p><strong>Booking Time:</strong> 11:00 AM</p>
+        <p><strong>Fare:</strong> Rs. 399/-</p>
+        <p><strong>Departure:</strong> 10:30 AM</p>
+        <p><strong>Arrival:</strong> 2:30 PM</p>
+      </div>
+      <button class="Back"><a href="Booking .html" class="Back">Book Now</a></button>
+    </div>
+
+    <div class="service-card">
+      <h2 class="service-name">Jakhar Travels</h2>
+      <p>Happy Journey!</p>
+      <div class="details">
+        <p><strong>Booking Time:</strong> 12:00 AM</p>
+        <p><strong>Fare:</strong> Rs. 399/-</p>
+        <p><strong>Departure:</strong> 12:30 PM</p>
+        <p><strong>Arrival:</strong> 4:30 PM</p>
+      </div>
+      <button class="Back"><a href="Booking .html" class="Back">Book Now</a></button>
+    </div>
+  </section>
+  <section id="services" class="services-section">
+    <div class="service-card">
+      <h2 class="service-name">Tiger Travels</h2>
+      <p>Happy Journey!</p>
+      <div class="details">
+        <p><strong>Booking Time:</strong> 11:00 AM</p>
+        <p><strong>Fare:</strong> Rs. 399/-</p>
+        <p><strong>Departure:</strong> 10:30 AM</p>
+        <p><strong>Arrival:</strong> 2:30 PM</p>
+      </div>
+      <button class="Back"><a href="Booking .html" class="Back">Book Now</a></button>
+    </div>
+
+    <div class="service-card">
+      <h2 class="service-name">Deepak Travels</h2>
+      <p>Happy Journey!</p>
+      <div class="details">
+        <p><strong>Booking Time:</strong> 12:00 AM</p>
+        <p><strong>Fare:</strong> Rs. 399/-</p>
+        <p><strong>Departure:</strong> 12:30 PM</p>
+        <p><strong>Arrival:</strong> 4:30 PM</p>
+      </div>
+      <button class="book-now">Book Now</button>
+    </div>
+  </section>
+  <section id="services" class="services-section">
+    <div class="service-card">
+      <h2 class="service-name">Bajrang Travels</h2>
+      <p>Happy Journey!</p>
+      <div class="details">
+        <p><strong>Booking Time:</strong> 11:00 AM</p>
+        <p><strong>Fare:</strong> Rs. 399/-</p>
+        <p><strong>Departure:</strong> 10:30 AM</p>
+        <p><strong>Arrival:</strong> 2:30 PM</p>
+      </div>
+      <button class="book-now">Book Now</button>
+    </div>
+
+    <div class="service-card">
+      <h2 class="service-name">Shree Gannesh Travels</h2>
+      <p>Happy Journey!</p>
+      <div class="details">
+        <p><strong>Booking Time:</strong> 12:00 AM</p>
+        <p><strong>Fare:</strong> Rs. 399/-</p>
+        <p><strong>Departure:</strong> 12:30 PM</p>
+        <p><strong>Arrival:</strong> 4:30 PM</p>
+      </div>
+      <button class="book-now">Book Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© MAKE BY SAGAR SUTHAR</p>
+  </footer>
+</body>
+</html>

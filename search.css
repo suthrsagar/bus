@@ -1,0 +1,31 @@
+body {
+  background-color: #f88585;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: rgb(16, 60, 255);
+  font-size: 40px;
+  margin: 30px;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  padding-top: 10px;
+}
+.option {
+  color: rgb(0, 0, 0);
+  justify-items: center;
+}
+h3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: floralwhite;
+}
+h3 :hover {
+  color: black;
+  border-radius: 15px;
+}

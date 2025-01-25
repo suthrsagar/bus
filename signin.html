@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with OTP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login with OTP</h2>
+        
+        <!-- Phone number input -->
+        <div class="input-group" id="phone-container">
+            <label for="phone">Enter your phone number</label>
+            <input type="text" id="phone" placeholder="Enter phone number" />
+            <button onclick="sendOtp()">Send OTP</button>
+        </div>
+
+        <!-- OTP input -->
+        <div class="input-group" id="otp-container" style="display:none;">
+            <label for="otp">Enter OTP</label>
+            <input type="text" id="otp" placeholder="Enter OTP" />
+            <button onclick="verifyOtp()">Verify OTP</button>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+        let otp;  // Variable to store the generated OTP
+
+        // Function to send OTP
+        function sendOtp() {
+            const phoneNumber = document.getElementById("phone").value;
+
+            if (phoneNumber === "") {
+                alert("Please enter a phone number.");
+                return;
+            }
+
+            // Simulating OTP generation and sending
+            otp = Math.floor(100000 + Math.random() * 900000);  // Generate a random 6-digit OTP
+            console.log("Generated OTP: " + otp);  // For testing, you can check the console
+
+            // Simulating the OTP sending process (in real life, use a backend API to send OTP)
+            alert("OTP has been sent to " + phoneNumber);
+
+            // Show OTP input field
+            document.getElementById("phone-container").style.display = "none";
+            document.getElementById("otp-container").style.display = "block";
+            document.getElementById("message").innerHTML = "An OTP has been sent to your phone. Please enter it.";
+        }
+
+        // Function to verify OTP
+        function verifyOtp() {
+            const enteredOtp = document.getElementById("otp").value;
+
+            if (enteredOtp === "") {
+                alert("Please enter the OTP.");
+                return;
+            }
+
+            // Check if the entered OTP matches the generated OTP
+            if (parseInt(enteredOtp) === otp) {
+                document.getElementById("message").innerHTML = "OTP Verified Successfully!";
+                document.getElementById("message").style.color = "green";
+            } else {
+                document.getElementById("message").innerHTML = "Invalid OTP. Please try again.";
+                document.getElementById("message").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

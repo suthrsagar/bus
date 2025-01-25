@@ -1,0 +1,40 @@
+#bus {
+  color: rgb(81, 85, 81);
+  background-color: grey;
+  text-align: center;
+  padding: 2.5px;
+}
+#Ticket {
+  background-color: blueviolet;
+  text-align: center;
+  padding: 10px;
+}
+#booking {
+  padding: 7px;
+  color: black;
+  background-color: rgb(255, 0, 149);
+}
+#green_tick-removebg-preview {
+  display: block;
+  padding: 10px;
+}
+#body1 {
+  background-color: rgb(179, 237, 255);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  justify-items: center;
+}
+body {
+  background-color: blueviolet;
+}
+.Back {
+  color: blue;
+  text-decoration: none;
+  padding: 6px;
+  background-color: rgb(78, 230, 250);
+}
+.Back :hover {
+  color: rgb(255, 0, 0);
+}

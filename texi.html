@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Taxi Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff8c7d;
+            margin: 0;
+            padding: 0;
+           
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-left: 4px solid #4CAF50;
+        }
+        .car-list {
+            margin-top: 20px;
+        }
+        .car-card {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Book a Taxi</h1>
+        
+        <!-- Taxi booking form -->
+        <form id="taxiForm">
+            <label for="pickupLocation">Pickup Location</label>
+            <input type="text" id="pickupLocation" placeholder="Enter your pickup location" required>
+
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" placeholder="Enter your destination" required>
+
+            <label for="pickupTime">Pickup Time</label>
+            <input type="datetime-local" id="pickupTime" required>
+
+            <label for="carType">Car Type</label>
+            <select id="carType" required>
+                <option value="Thar">Thar</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Bike">Bike</option>
+                <option value="Alto">Alto</option>
+                <option value="Bolero">Bolero</option>
+                <option value="pickup">pickup</option>
+                <option value="Cemaer">Cemaer</option>
+                <option value="Creata">Creata</option>
+                <option value="Neno">Neno</option>
+                <option value="thai rox">thai rox</option>
+                <option value="scorpio">scorpio</option>
+                <option value="rangerover">rangerover</option>
+
+            
+            </select>
+
+            <button type="submit">Book Taxi</button>
+        </form>
+
+        <!-- Response Section -->
+        <div id="response" class="response" style="display: none;">
+            <h3>Booking Confirmed:</h3>
+            <p>Your taxi has been booked!</p>
+            <pre id="bookingDetails"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('taxiForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get values from the form
+            const pickupLocation = document.getElementById('pickupLocation').value;
+            const destination = document.getElementById('destination').value;
+            const pickupTime = document.getElementById('pickupTime').value;
+            const carType = document.getElementById('carType').value;
+
+            // Basic form validation
+            if (pickupLocation && destination && pickupTime && carType) {
+                // Mock response (in real-world, you'd send data to a server)
+                const bookingDetails = `
+                Pickup Location: ${pickupLocation}
+                Destination: ${destination}
+                Pickup Time: ${pickupTime}
+                Car Type: ${carType}
+                `;
+
+                // Display booking confirmation
+                document.getElementById('bookingDetails').textContent = bookingDetails;
+                document.getElementById('response').style.display = 'block';
+
+                // Optionally reset the form
+                document.getElementById('taxiForm').reset();
+            } else {
+                alert("Please fill out all fields!");
+            }
+        });
+    </script>
+
+</body>
+</html>
